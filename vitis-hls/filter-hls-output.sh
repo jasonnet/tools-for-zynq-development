@@ -11,6 +11,11 @@ do
 	elif [[ "$readline" == "FATAL_ERROR: "* ]] ; then
 		echo "$readline"
 		EXIT_CODE=1
+	elif [[ "$readline" == "Failure: NORMAL EXIT "* ]] ; then
+    # Ex.
+    #    Failure: NORMAL EXIT (note: failure is to force the simulator to stop)
+		echo "$readline"
+		#EXIT_CODE=1
 	elif [[ "$readline" == "Failure: "* ]] ; then
 		echo "$readline"
 		EXIT_CODE=1
